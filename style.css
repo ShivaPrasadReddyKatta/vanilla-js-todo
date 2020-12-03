@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-image: linear-gradient(90deg, #f7971e, #ffd200);
+  color: white;
+  min-height: 100vh;
+}
+
+header {
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid black; */
+  min-height: 20vh;
+}
+
+form {
+  display: flex;
+  /* border: 1px solid black; */
+  justify-content: center;
+  align-items: center;
+  min-height: 20vh;
+}
+
+form input,
+button {
+  padding: 0.5rem;
+  border: none;
+  outline: none;
+  background: white;
+  font-size: 2rem;
+}
+
+form button {
+  color: #ff6f47;
+  background: #f7fffe;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+form button:hover {
+  color: white;
+  background: #ffd200;
+}
+
+.todo-container {
+  /* border: 1px solid red; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.todo-list {
+  min-width: 30%;
+  /* border: 2px solid violet; */
+  list-style: none;
+}
+
+.todo {
+  /* border: 3px solid black; */
+  margin: 0.5rem;
+  color: black;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  transition: all 0.5s ease;
+}
+
+.todo li {
+  flex: 1;
+}
+
+.todo-item {
+  padding: 0rem 0.5rem;
+}
+
+.complete-btn,
+.delete-btn {
+  background: #ff6f47;
+  color: #f7fffe;
+  border: none;
+  outline: none;
+  padding: 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.complete-btn {
+  background: rgb(11, 212, 162);
+}
+
+.delete-btn {
+  background: red;
+}
+
+.fa-trash,
+.fa-check {
+  pointer-events: none;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.fall {
+  transform: translateX(50%);
+  opacity: 0;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: none;
+  box-shadow: none;
+  border: 0 !important;
+  background-image: none;
+  /* padding: 0.5rem; */
+  font-family: "Poppins", sans-serif;
+  color: #ff6f47;
+  cursor: pointer;
+  width: 12rem;
+  padding: 1rem;
+}
+
+.select {
+  /* border: 1px solid black; */
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  background: #ff6f47;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.select:hover::after {
+  background: white;
+  color: #ff6f47;
+}
